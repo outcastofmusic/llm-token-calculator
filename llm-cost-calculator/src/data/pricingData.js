@@ -1,5 +1,12 @@
 export const pricingData = {
   "Azure OpenAI": {
+    references: {
+      pricing: "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/",
+      ptuDocs: "https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/provisioned-throughput-onboarding",
+      quotaLimits: "https://learn.microsoft.com/en-us/azure/ai-foundry/openai/quotas-limits",
+      ptuCalculator: "https://ai.azure.com/resource/calculator",
+      lastUpdated: "January 2025"
+    },
     models: {
       "GPT-4o": {
         payPerToken: {
@@ -88,6 +95,13 @@ export const pricingData = {
     }
   },
   "Anthropic": {
+    references: {
+      pricing: "https://www.anthropic.com/pricing",
+      apiDocs: "https://docs.anthropic.com/en/docs/about-claude/pricing",
+      models: "https://docs.anthropic.com/en/docs/about-claude/models/overview",
+      claude4: "https://www.anthropic.com/news/claude-4",
+      lastUpdated: "January 2025"
+    },
     models: {
       "Claude Opus 4": {
         payPerToken: {
@@ -142,6 +156,13 @@ export const pricingData = {
     }
   },
   "Google Vertex AI": {
+    references: {
+      pricing: "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+      geminiDocs: "https://ai.google.dev/gemini-api/docs/pricing",
+      vertexPricing: "https://cloud.google.com/vertex-ai/pricing",
+      models: "https://ai.google.dev/gemini-api/docs/models",
+      lastUpdated: "January 2025"
+    },
     models: {
       "Gemini 2.5 Pro": {
         payPerToken: {

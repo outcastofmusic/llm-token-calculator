@@ -352,6 +352,99 @@
   font-size: 0.9rem;
 }
 
+/* References Section */
+.references-section {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.references-section h3 {
+  color: #2d3748;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.references-intro {
+  color: #4a5568;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.provider-references {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.provider-references h4 {
+  color: #667eea;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 0.5rem;
+}
+
+.reference-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.reference-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.reference-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  text-decoration: none;
+  color: white;
+}
+
+.last-updated {
+  background: #e2e8f0;
+  color: #4a5568;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.verification-note {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #fff5f5;
+  border-left: 4px solid #f56565;
+  border-radius: 8px;
+}
+
+.verification-note p {
+  color: #2d3748;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.verification-note strong {
+  color: #e53e3e;
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
   .comparison-table {
@@ -407,5 +500,22 @@
 
   .cost-value {
     font-size: 0.95rem;
+  }
+
+  .references-section {
+    padding: 1rem;
+  }
+
+  .provider-references {
+    padding: 1rem;
+  }
+
+  .reference-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .reference-link {
+    text-align: center;
   }
 }

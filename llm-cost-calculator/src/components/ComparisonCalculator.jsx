@@ -500,6 +500,62 @@ function ComparisonCalculator() {
       <div className="info-footer">
         <p>Prices as of January 2025. Azure OpenAI uses per-1K-token pricing, others use per-1M-token pricing.</p>
       </div>
+
+      <div className="references-section">
+        <h3>Pricing References & Verification</h3>
+        <p className="references-intro">
+          All pricing information is sourced from official provider documentation. Click the links below to verify current rates:
+        </p>
+
+        {Object.entries(pricingData).map(([provider, data]) => (
+          <div key={provider} className="provider-references">
+            <h4>{provider}</h4>
+            <div className="reference-links">
+              {Object.entries(data.references).map(([key, url]) => {
+                if (key === 'lastUpdated') {
+                  return (
+                    <span key={key} className="last-updated">
+                      Last updated: {url}
+                    </span>
+                  );
+                }
+
+                const linkText = {
+                  pricing: 'Official Pricing',
+                  ptuDocs: 'PTU Documentation',
+                  quotaLimits: 'Quota & Limits',
+                  ptuCalculator: 'PTU Calculator',
+                  apiDocs: 'API Documentation',
+                  models: 'Model Overview',
+                  claude4: 'Claude 4 Release',
+                  geminiDocs: 'Gemini Pricing',
+                  vertexPricing: 'Vertex AI Pricing'
+                }[key] || key;
+
+                return (
+                  <a
+                    key={key}
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="reference-link"
+                  >
+                    {linkText}
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+        ))}
+
+        <div className="verification-note">
+          <p>
+            <strong>Important:</strong> Pricing may vary by region, usage volume, and subscription type.
+            PTU pricing is estimated based on typical workload patterns. Always consult official
+            provider documentation for the most current and accurate pricing for your specific use case.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
