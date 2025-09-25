@@ -166,10 +166,10 @@ export const pricingData = {
     models: {
       "Gemini 2.5 Pro": {
         payPerToken: {
-          inputPer1M: 2.5,
-          outputPer1M: 15,
-          longContextInputPer1M: 5,
-          longContextOutputPer1M: 30,
+          inputPer1M: 1.25,
+          outputPer1M: 10,
+          longContextInputPer1M: 2.5,
+          longContextOutputPer1M: 15,
           contextThreshold: 200000
         },
         apiCalls: {
@@ -179,7 +179,7 @@ export const pricingData = {
       },
       "Gemini 2.5 Flash": {
         payPerToken: {
-          inputPer1M: 0.5,
+          inputPer1M: 0.3,
           outputPer1M: 2,
           longContextInputPer1M: 1,
           longContextOutputPer1M: 4,
